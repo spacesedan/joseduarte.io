@@ -15,8 +15,16 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
-        <body>
+        <Head>
+          <link
+            rel='preload'
+            href='/fonts/Inter-Var.ttf'
+            as='font'
+            type='font/tff'
+            crossOrigin='anonymous'
+          />
+        </Head>
+        <body className='bg-white dark:bg-black text-black dark:text-white'>
           <Main />
           <NextScript />
         </body>

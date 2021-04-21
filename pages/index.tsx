@@ -1,7 +1,11 @@
-export default function Home() {
+import Container from 'components/Container';
+
+export default function Index() {
   return (
-    <div>
-      <p>Don't check me check the air quality</p>
-    </div>
+    <Container>
+      <div>
+        <p className='text-gray-800 dark:text-gray-200'>Hello world</p>
+      </div>
+    </Container>
   );
 }

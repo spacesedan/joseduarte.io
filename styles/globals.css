@@ -23,3 +23,9 @@
 html {
   scroll-behavior: smooth;
 }
+
+.sticky-nav {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+}
