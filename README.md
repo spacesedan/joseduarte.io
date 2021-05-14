@@ -1,34 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Oh-say.media (My Portfolio)
 
-## Getting Started
+## Technologies I want to use for my portfolio
 
-First, run the development server:
+- Three.js
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+  - @react-three/fiber
+  - @react-three/drei
+  - @react-three/cannon
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  ```zsh
+  yarn add three @react-three/fiber @react-three/drei @react-three/cannon
+  ```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## What do i want to build with it
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Macbook 3d model that will work as my hero image similar to [Panic](https://panic.com/transmit/ 'https://panic.com/transmit/')
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Problems using this technology
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- No prior experience using Three.js
+  - the only experiece i have is the videos i saw on udemy
+  - I plan to overcome this by following youtube tutorials on Blender so that I can get working knowledge of creating custom GTLF models and animations
+- Learning how to use Three js in a React project
+- I do have [resources] (https://sbcode.net/threejs/ "Sean Bradley Three.js tutorial") on the vairous modules included with three.js, it will just take practice to be able to build my models

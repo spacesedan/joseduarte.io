@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import NextLink from 'next/link';
 
 type Meta = {
   title: string;
@@ -30,7 +29,7 @@ export default function Container(props) {
   };
 
   return (
-    <div className='bg-white dark:bg-black'>
+    <div className='bg-gray-200 dark:bg-black min-h-screen grid grid-cols-7 grid-rows-1 px-24'>
       <Head>
         <meta name='robots' content='follow, index' />
         <meta content={meta.description} name='description' />
@@ -45,11 +44,11 @@ export default function Container(props) {
         <meta property='og:title' content={meta.title} />
         <meta property='og_image' content={meta.image} />
       </Head>
-      <nav className='sticky-nav'>
+      <nav className='sticky-nav col-start-7 col-end-7 row-span-full'>
         <button
           aria-label='Toggle Dark Mode'
           type='button'
-          className='bg-gray-200 dark:bg-gray-800 rounded p-3 h-10 w-10 focus:outline-none'
+          className='bg-gray-300 dark:bg-gray-900 rounded p-3 h-10 w-10 focus:outline-none'
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
         >
           {mounted && (
@@ -79,7 +78,9 @@ export default function Container(props) {
           )}
         </button>
       </nav>
-      <main>{children}</main>
+      <main className='col-span-full row-span-full grid grid-rows-6 grid-cols-7'>
+        {children}
+      </main>
     </div>
   );
 }

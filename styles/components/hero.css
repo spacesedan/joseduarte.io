@@ -1,0 +1,7 @@
+.hero-text {
+  @apply text-black dark:text-white font-sans font-extrabold text-5xl md:text-9xl uppercase text-center italic;
+}
+
+.hero-text_subtext {
+  @apply text-black dark:text-white font-sans font-extrabold text-xl md:text-3xl uppercase text-center italic;
+}
