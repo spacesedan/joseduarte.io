@@ -1,0 +1,7 @@
+.projectcard {
+  @apply bg-gray-200 dark:bg-black p-5 mt-5;
+}
+
+.projectcard:first-child {
+  @apply mt-0;
+}
