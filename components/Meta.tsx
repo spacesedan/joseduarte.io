@@ -26,14 +26,15 @@ export default function Meta(props) {
       <meta content={meta.description} name='description' />
       <meta
         property='og:url'
-        content={`https://oh-say.media${router.asPath}`}
+        content={`https://joseduarte.io${router.asPath}`}
       />
-      <link rel='canonical' href={`ttps://oh-say.media${router.asPath}`} />
+      <link rel='canonical' href={`ttps://joseduarte.io${router.asPath}`} />
       <meta property='og:type' content={meta.type} />
       <meta property='og:site_name' content='Jose Duarte' />
       <meta property='og_description' content={meta.description} />
       <meta property='og:title' content={meta.title} />
       <meta property='og_image' content={meta.image} />
+      <title>Jose Duarte Web Development Portfolio</title>
     </Head>
   );
 }

@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 import Meta from 'components/Meta';
 import Nav from 'components/Nav';
@@ -17,6 +17,8 @@ export default function Index() {
   const conRef = useRef(null);
 
   useEffect(() => {}, []);
+
+  /** Scrolling Actions */
 
   const scrollToHero = () => {
     homRef.current.scrollIntoView({ behavior: 'smooth' });
