@@ -28,7 +28,7 @@ export default function Meta(props) {
         property='og:url'
         content={`https://joseduarte.io${router.asPath}`}
       />
-      <link rel='canonical' href={`ttps://joseduarte.io${router.asPath}`} />
+      <link rel='canonical' href={`https://joseduarte.io${router.asPath}`} />
       <meta property='og:type' content={meta.type} />
       <meta property='og:site_name' content='Jose Duarte' />
       <meta property='og_description' content={meta.description} />
