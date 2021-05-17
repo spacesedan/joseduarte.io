@@ -5,7 +5,7 @@ export const Projects = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <section
       id='projects'
-      className='row-start-2 row-end-3 col-span-full  pt-12'
+      className='row-start-2 row-end-3 col-span-full pt-12'
       ref={ref}
     >
       <h3 className='font-bold font-sans text-4xl'>Projects</h3>

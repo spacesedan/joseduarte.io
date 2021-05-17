@@ -4,7 +4,7 @@ export const Works = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <section
       id='workshop'
-      className='row-start-4 row-end-5 col-span-full'
+      className='row-start-4 row-end-5 col-span-full pt-12'
       ref={ref}
     >
       {' '}
