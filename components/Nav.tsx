@@ -3,7 +3,7 @@ import { useTheme } from 'next-themes';
 
 import SideNav from './SideNav';
 
-export default function Nav() {
+export default function Nav({ children }) {
   const [mounted, setMouted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
@@ -45,7 +45,7 @@ export default function Nav() {
             </svg>
           )}
         </button>
-        <SideNav />
+        {children}
       </div>
     </nav>
   );

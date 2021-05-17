@@ -1,38 +1,62 @@
-import Container from 'components/Container';
-import HeroText from 'components/HeroText';
-import Macbook from 'components/Macbook';
-import ProjectCard from 'components/ProjectCard';
+import { useRef, useEffect } from 'react';
+
+import Meta from 'components/Meta';
+import Nav from 'components/Nav';
+import Hero from 'components/sections/Hero';
+import Project from 'components/sections/Projects';
+import About from 'components/sections/About';
+import Works from 'components/sections/Works';
+import Contact from 'components/sections/Contact';
+import SideNav from 'components/SideNav';
 
 export default function Index() {
+  const homRef = useRef(null);
+  const projRef = useRef(null);
+  const aboRef = useRef(null);
+  const worRef = useRef(null);
+  const conRef = useRef(null);
+
+  useEffect(() => {}, []);
+
+  const scrollToHero = () => {
+    homRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToProjects = () => {
+    projRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToAbout = () => {
+    aboRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToWorks = () => {
+    worRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToContact = () => {
+    conRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <Container>
-      <section
-        id='hero'
-        className='py-40 md:py-20 col-span-full row-start-1 row-end-2 max-h-screen'
-      >
-        <Macbook />
-        <HeroText />
-      </section>
-      <section className='row-start-2 row-end-3 col-span-full ' id='projects'>
-        <h3 className='font-bold font-sans text-4xl'>Projects</h3>
-        <div className='bg-green-400 px-8 lg:px-24 py-16 mt-5'>
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-        </div>
-      </section>
-      <section id='about' className='row-start-3 row-end-4 col-span-full mt-10'>
-        <h3 className='font-bold font-sans text-4xl'>About</h3>
-      </section>
-      <section id='workshop' className='row-start-4 row-end-5 col-span-full'>
-        {' '}
-        <h3 className='font-bold font-sans text-4xl'>In The Works</h3>
-      </section>
-      <section id='contact' className='row-start-5 row-end-6 col-span-full'>
-        {' '}
-        <h3 className='font-bold font-sans text-4xl'>Contact</h3>
-      </section>
-    </Container>
+    <div className='bg-gray-200 dark:bg-black min-h-screen grid grid-cols-7 grid-rows-1 px-24'>
+      <Meta />
+      <Nav>
+        <SideNav
+          scrollToHero={scrollToHero}
+          scrollToProjects={scrollToProjects}
+          scrollToAbout={scrollToAbout}
+          scrollToWorks={scrollToWorks}
+          scrollToContact={scrollToContact}
+        />
+      </Nav>
+      <main className='col-span-full row-span-full grid grid-rows-6 grid-cols-7'>
+        <Hero ref={homRef} />
+        <Project ref={projRef} />
+        <About ref={aboRef} />
+        <Works ref={worRef} />
+        <Contact ref={conRef} />
+      </main>
+    </div>
   );
 }
