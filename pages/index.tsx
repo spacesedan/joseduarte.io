@@ -8,6 +8,7 @@ import About from 'components/sections/About';
 import Works from 'components/sections/Works';
 import Contact from 'components/sections/Contact';
 import SideNav from 'components/SideNav';
+import useOnScreen from 'utils/useOnScreen';
 
 export default function Index() {
   const homRef = useRef(null);
@@ -45,6 +46,11 @@ export default function Index() {
       <Meta />
       <Nav>
         <SideNav
+          hero={homRef}
+          projects={projRef}
+          about={aboRef}
+          works={worRef}
+          contact={conRef}
           scrollToHero={scrollToHero}
           scrollToProjects={scrollToProjects}
           scrollToAbout={scrollToAbout}
@@ -52,7 +58,7 @@ export default function Index() {
           scrollToContact={scrollToContact}
         />
       </Nav>
-      <main className='col-span-full row-span-full grid grid-rows-6 grid-cols-7'>
+      <main className='col-span-full row-span-full gap-4 grid grid-rows-5 grid-cols-7'>
         <Hero ref={homRef} />
         <Project ref={projRef} />
         <About ref={aboRef} />
