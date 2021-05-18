@@ -15,7 +15,7 @@ export const ProjectCard: React.FC<IProjectCard> = ({
       <h5 className='text-3xl font-bold pb-5'>{title}</h5>
 
       <div className='aspect-h-1 aspect-w-2 bg-black dark:bg-gray-200 relative'>
-        <a href={live} target='_blank'>
+        <a href={live} target='_blank' rel='noreferrer'>
           <Image src={img} layout='fill' alt={title} />
         </a>
       </div>
