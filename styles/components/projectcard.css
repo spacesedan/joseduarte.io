@@ -1,5 +1,5 @@
 .projectcard {
-  @apply bg-gray-200 dark:bg-black py-5 px-8 mt-5 hover:bg-gray-300 dark:hover:bg-gray-900 cursor-pointer;
+  @apply bg-gray-200 dark:bg-black py-5 px-8 mt-5  cursor-pointer;
 }
 
 .projectcard:first-child {

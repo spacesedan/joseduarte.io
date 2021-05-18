@@ -8,16 +8,15 @@ import About from 'components/sections/About';
 import Works from 'components/sections/Works';
 import Contact from 'components/sections/Contact';
 import SideNav from 'components/SideNav';
-import useOnScreen from 'utils/useOnScreen';
 
-export default function Index() {
+import { getAllFilesFrontMatter } from 'lib/mdx';
+
+export default function Index({ projects }) {
   const homRef = useRef(null);
   const projRef = useRef(null);
   const aboRef = useRef(null);
   const worRef = useRef(null);
   const conRef = useRef(null);
-
-  useEffect(() => {}, []);
 
   /** Scrolling Actions */
 
@@ -60,11 +59,19 @@ export default function Index() {
       </Nav>
       <main className='container'>
         <Hero ref={homRef} />
-        <Project ref={projRef} />
+        <Project ref={projRef} projects={projects} />
         <About ref={aboRef} />
         <Works ref={worRef} />
         <Contact ref={conRef} />
       </main>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const projects = await getAllFilesFrontMatter('projects');
+
+  return {
+    props: { projects },
+  };
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Works = React.forwardRef<HTMLDivElement>((props, ref) => {
+export const Works = React.forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <section
       id='workshop'
