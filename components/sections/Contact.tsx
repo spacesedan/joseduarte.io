@@ -6,7 +6,7 @@ export const Contact = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <section
       id='contact'
-      className='row-start-5 row-end-6 col-span-full pt-12'
+      className='row-start-5 row-end-6 col-span-full pt-12 min-h-screen'
       ref={ref}
     >
       {' '}

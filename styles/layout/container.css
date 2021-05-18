@@ -1,3 +1,4 @@
 .container {
-  grid-template-rows: minmax(min-content, auto);
+  @apply col-span-full row-span-full gap-4 grid  grid-cols-7;
+  grid-template-rows: repeat(5, minmax(min-content, auto));
 }

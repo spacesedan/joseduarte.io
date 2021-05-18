@@ -4,7 +4,7 @@ export const About = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <section
       id='about'
-      className='row-start-3 row-end-4 col-span-full pt-12'
+      className='row-start-3 row-end-4 col-span-full pt-12 min-h-screen'
       ref={ref}
     >
       <h3 className='font-bold font-sans text-4xl'>About</h3>

@@ -42,7 +42,7 @@ export default function Index() {
   };
 
   return (
-    <div className='bg-gray-200 dark:bg-black min-h-screen grid grid-cols-7 grid-rows-1 px-24'>
+    <div className='bg-gray-200 dark:bg-black min-h-screen grid grid-cols-7 grid-rows-1 px-6 md:px-24'>
       <Meta />
       <Nav>
         <SideNav
@@ -58,7 +58,7 @@ export default function Index() {
           scrollToContact={scrollToContact}
         />
       </Nav>
-      <main className='col-span-full row-span-full gap-4 grid grid-rows-5 grid-cols-7'>
+      <main className='container'>
         <Hero ref={homRef} />
         <Project ref={projRef} />
         <About ref={aboRef} />
