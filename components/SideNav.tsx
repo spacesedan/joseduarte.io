@@ -26,7 +26,7 @@ export default function SideNav({
         viewBox='0 0 600 600'
         fill='currentColor'
         stroke='currentColor'
-        className='section_icon'
+        className='section__icon'
         onClick={scrollToHero}
       >
         <path d='M308,44C161.37,44,42.5,162.87,42.5,309.5S161.37,575,308,575,573.5,456.13,573.5,309.5,454.63,44,308,44Zm0,469.25c-112.53,0-203.75-91.22-203.75-203.75S195.47,105.75,308,105.75,511.75,197,511.75,309.5,420.53,513.25,308,513.25Z' />
@@ -40,7 +40,7 @@ export default function SideNav({
         viewBox='0 0 600 600'
         fill='currentColor'
         stroke='currentColor'
-        className='section_icon'
+        className='section__icon'
         onClick={scrollToProjects}
       >
         <path d='M308,44C161.37,44,42.5,162.87,42.5,309.5S161.37,575,308,575,573.5,456.13,573.5,309.5,454.63,44,308,44Zm0,469.25c-112.53,0-203.75-91.22-203.75-203.75S195.47,105.75,308,105.75,511.75,197,511.75,309.5,420.53,513.25,308,513.25Z' />
@@ -55,7 +55,7 @@ export default function SideNav({
         viewBox='0 0 600 600'
         fill='currentColor'
         stroke='currentColor'
-        className='section_icon'
+        className='section__icon'
         onClick={scrollToAbout}
       >
         <path d='M308,44C161.37,44,42.5,162.87,42.5,309.5S161.37,575,308,575,573.5,456.13,573.5,309.5,454.63,44,308,44Zm0,469.25c-112.53,0-203.75-91.22-203.75-203.75S195.47,105.75,308,105.75,511.75,197,511.75,309.5,420.53,513.25,308,513.25Z' />
@@ -70,7 +70,7 @@ export default function SideNav({
         viewBox='0 0 600 600'
         fill='currentColor'
         stroke='currentColor'
-        className='section_icon'
+        className='section__icon'
         onClick={scrollToWorks}
       >
         <path d='M308,44C161.37,44,42.5,162.87,42.5,309.5S161.37,575,308,575,573.5,456.13,573.5,309.5,454.63,44,308,44Zm0,469.25c-112.53,0-203.75-91.22-203.75-203.75S195.47,105.75,308,105.75,511.75,197,511.75,309.5,420.53,513.25,308,513.25Z' />
@@ -85,7 +85,7 @@ export default function SideNav({
         viewBox='0 0 600 600'
         fill='currentColor'
         stroke='currentColor'
-        className='section_icon'
+        className='section__icon'
         onClick={scrollToContact}
       >
         <path d='M308,44C161.37,44,42.5,162.87,42.5,309.5S161.37,575,308,575,573.5,456.13,573.5,309.5,454.63,44,308,44Zm0,469.25c-112.53,0-203.75-91.22-203.75-203.75S195.47,105.75,308,105.75,511.75,197,511.75,309.5,420.53,513.25,308,513.25Z' />

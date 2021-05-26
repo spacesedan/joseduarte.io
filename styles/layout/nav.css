@@ -4,23 +4,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-right: 2.5rem;
+  padding-right: 1rem;
   padding-top: 2rem;
-  z-index: 10;
+  z-index: 1;
 
   top: 0;
-  right: 0;
+
   font-family: 'Monserrat';
 }
 
-@media screen and (max-width: 640px) {
-  .sticky-nav {
-    display: hidden;
-  }
+.section__icon {
+  display: block;
+  @apply w-4 h-4 md:w-8 md:h-8 text-gray-800 dark:text-gray-200 mt-3 mb-3;
 }
-.section_icon {
-  width: 2rem;
-  height: 2rem;
 
-  @apply text-gray-800 dark:text-gray-200 mt-3 mb-3;
+@media screen and (min-width: 640px) {
+  .sticky-nav {
+    padding-right: 2.5rem;
+    right: 0;
+  }
 }

@@ -31,7 +31,10 @@ export const Modal: React.FC<IModalProps> = ({
   console.log(selectedImage);
 
   return (
-    <div className='backdrop' onClick={handleClick}>
+    <div
+      className='backdrop row-span-full col-span-full z-50'
+      onClick={handleClick}
+    >
       <div className='modal__close fixed'>
         <svg
           onClick={handleIconClose}
