@@ -12,3 +12,15 @@
   right: 0;
   font-family: 'Monserrat';
 }
+
+@media screen and (max-width: 640px) {
+  .sticky-nav {
+    display: hidden;
+  }
+}
+.section_icon {
+  width: 2rem;
+  height: 2rem;
+
+  @apply text-gray-800 dark:text-gray-200 mt-3 mb-3;
+}

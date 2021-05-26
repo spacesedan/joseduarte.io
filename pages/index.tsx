@@ -10,13 +10,26 @@ import Contact from 'components/sections/Contact';
 import SideNav from 'components/SideNav';
 
 import { getAllFilesFrontMatter } from 'lib/mdx';
+import Modal from 'components/Modal';
+import { Details, Image } from 'types/project';
 
-export default function Index({ projects }) {
+export const Index = ({ projects }) => {
   const homRef = useRef(null);
   const projRef = useRef(null);
   const aboRef = useRef(null);
   const worRef = useRef(null);
   const conRef = useRef(null);
+
+  // init state
+  const [selectedImage, setImage] = useState<Image | null>(null);
+  const [details, setDetails] = useState<Details | null>({
+    title: null,
+    summary: null,
+    purpose: null,
+    challenges: null,
+    github: null,
+    live: null,
+  });
 
   /** Scrolling Actions */
 
@@ -59,14 +72,27 @@ export default function Index({ projects }) {
       </Nav>
       <main className='container'>
         <Hero ref={homRef} />
-        <Project ref={projRef} projects={projects} />
+        <Project
+          ref={projRef}
+          projects={projects}
+          setDetails={setDetails}
+          setImage={setImage}
+        />
         <About ref={aboRef} />
         <Works ref={worRef} />
         <Contact ref={conRef} />
+        {selectedImage && (
+          <Modal
+            setDetails={setDetails}
+            details={details}
+            selectedImage={selectedImage}
+            setImage={setImage}
+          />
+        )}
       </main>
     </div>
   );
-}
+};
 
 export async function getStaticProps() {
   const projects = await getAllFilesFrontMatter('projects');
@@ -75,3 +101,5 @@ export async function getStaticProps() {
     props: { projects },
   };
 }
+
+export default Index;

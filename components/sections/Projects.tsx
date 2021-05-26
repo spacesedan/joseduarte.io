@@ -1,13 +1,16 @@
 import React from 'react';
+
 import ProjectCard from '../ProjectCard';
-import { IProjectCard } from 'types/project';
+import { IProjectCard, Details } from 'types/project';
 
 interface IProjectProps {
   projects: [IProjectCard];
+  setDetails: React.Dispatch<React.SetStateAction<Details>>;
+  setImage: any;
 }
 
 const Projects = React.forwardRef<HTMLDivElement, IProjectProps>(
-  ({ projects }, ref) => {
+  ({ projects, setDetails, setImage }, ref) => {
     const proj = projects.map((p) => {
       return (
         <ProjectCard
@@ -17,6 +20,10 @@ const Projects = React.forwardRef<HTMLDivElement, IProjectProps>(
           github={p.github}
           live={p.live}
           img={p.img}
+          challenges={p.challenges}
+          purpose={p.purpose}
+          setDetails={setDetails}
+          setImage={setImage}
         />
       );
     });
