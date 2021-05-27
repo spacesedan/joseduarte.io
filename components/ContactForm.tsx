@@ -34,7 +34,7 @@ export default function ContactForm() {
         console.log(formData);
         setState({
           formButtonDisabled: true,
-          formButton: 'Thanks',
+          formButton: 'Message sent',
           name: '',
           email: '',
           text: '',
