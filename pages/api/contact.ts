@@ -20,7 +20,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   `;
 
   const data = {
-    to: 'jduarte0912@gmail.com',
+    to: 'iam@joseduarte.io',
     from: 'hello@joseduarte.io',
     subject: 'New contact form submission',
     text: msg,
