@@ -26,15 +26,23 @@ export default function ContactForm() {
     fetch('/api/contact', {
       method: 'POST',
       body: JSON.stringify(formData),
-    }).then(() => {
-      setState({
-        formButtonDisabled: true,
-        formButton: 'Thanks',
-        name: '',
-        email: '',
-        text: '',
+      headers: {
+        'Content-Type': 'application/plain',
+      },
+    })
+      .then(() => {
+        console.log(formData);
+        setState({
+          formButtonDisabled: true,
+          formButton: 'Thanks',
+          name: '',
+          email: '',
+          text: '',
+        });
+      })
+      .catch((err) => {
+        console.log(err);
       });
-    });
   };
 
   return (

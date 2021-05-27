@@ -1,6 +1,5 @@
 import nodemailer from 'nodemailer';
 import nodemailerSendgrid from 'nodemailer-sendgrid';
-
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const transport = nodemailer.createTransport(
