@@ -1,7 +1,13 @@
-import sgMail from '@sendgrid/mail';
+import nodemailer from 'nodemailer';
+import nodemailerSendgrid from 'nodemailer-sendgrid';
+
 import { NextApiRequest, NextApiResponse } from 'next';
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const transport = nodemailer.createTransport(
+  nodemailerSendgrid({
+    apiKey: process.env.SENDGRID_API_KEY,
+  })
+);
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
   const body = JSON.parse(req.body);
@@ -19,7 +25,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
     html: msg.replace(/\r\n/g, '<br>'),
   };
 
-  sgMail.send(data);
+  transport.sendMail(data);
 
   console.log(body);
   res.status(200).json({ status: 'ok' });
