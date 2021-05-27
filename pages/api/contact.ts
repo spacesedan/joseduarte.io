@@ -1,12 +1,15 @@
 import nodemailer from 'nodemailer';
-import nodemailerSendgrid from 'nodemailer-sendgrid';
 import { NextApiRequest, NextApiResponse } from 'next';
 
-const transport = nodemailer.createTransport(
-  nodemailerSendgrid({
-    apiKey: process.env.SENDGRID_API_KEY,
-  })
-);
+const transport = nodemailer.createTransport({
+  host: 'smtp.sendgrid.net',
+  port: 465,
+  secure: true,
+  auth: {
+    user: 'apikey',
+    pass: `${process.env.SENDGRID_API_KEY}`,
+  },
+});
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
   const body = JSON.parse(req.body);

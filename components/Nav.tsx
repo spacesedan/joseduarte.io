@@ -11,7 +11,7 @@ export default function Nav({ children }) {
   return (
     <section className='col-start-7 col-end-7 row-span-full'>
       <nav className='sticky-nav'>
-        <div className='ml-8 grid grid-rows-5 gap-2 justify-center items-center'>
+        <div className='ml-8 mt-36 md:mt-0 grid grid-rows-5 gap-2 justify-center items-center'>
           <button
             aria-label='Toggle Dark Mode'
             type='button'

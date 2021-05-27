@@ -1,0 +1,10 @@
+.paragraph {
+  width: clamp(45ch, 100%, 75ch);
+  @apply text-xl;
+}
+
+@media screen and (max-width: 640px) {
+  .paragraph {
+    width: clamp(45ch, 67.5%, 75ch);
+  }
+}
