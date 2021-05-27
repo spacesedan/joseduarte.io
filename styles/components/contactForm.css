@@ -1,0 +1,35 @@
+.contact {
+  @apply w-full min-h-screen flex pt-10 md:pt-0 items-center justify-center;
+}
+
+.contact__container {
+  @apply px-5 pt-12 pb-8 mx-1 flex flex-wrap flex-col lg:flex-row w-full h-auto items-start justify-center rounded-xl;
+}
+
+.contact__form {
+  @apply w-full lg:w-2/3 py-2 rounded-xl;
+}
+
+.contact__form--containter {
+  @apply flex flex-wrap;
+}
+
+.contact__form--input-group {
+  @apply w-full  px-3 mb-6 md:mb-0;
+}
+
+.contact__form--label {
+  @apply block tracking-wide text-black dark:text-white text-sm font-bold mb-2;
+}
+
+.contact__form--input {
+  @apply appearance-none block w-full bg-gray-400 text-black dark:text-black  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-green-400 focus:shadow-md;
+}
+
+.contact__form--btn-block {
+  @apply md:flex md:items-center w-full px-3 justify-start;
+}
+
+.contact__form--btn {
+  @apply shadow focus:outline-none focus:shadow-md text-black font-bold py-2 px-4 rounded;
+}

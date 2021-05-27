@@ -1,27 +1,26 @@
-import nodemailer from 'nodemailer';
-import sgTransport from 'nodemailer-sendgrid-transport';
+import sgMail from '@sendgrid/mail';
+import { NextApiRequest, NextApiResponse } from 'next';
 
-const transporter = nodemailer.createTransport(
-  sgTransport({
-    auth: {
-      api_key: process.env.SENDGRID_API,
-    },
-  })
-);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-const send = ({ email, name, text }) => {
-  const from = name && email ? `${name} <${email}>` : `${name || email}`;
-  const message = {
-    from,
+export default (req: NextApiRequest, res: NextApiResponse) => {
+  const body = JSON.parse(req.body);
+  const msg = `
+    Name: ${body.name}\r\n
+    Email: ${body.email}\r\n
+    Message: ${body.text}
+  `;
+
+  const data = {
     to: 'iam@joseduarte.io',
-    subject: 'Someone Filled Out the Contact Form',
-    text,
-    replyTo: from,
+    from: 'hello@joseduarte.io',
+    subject: 'New contact message',
+    text: msg,
+    html: msg.replace(/\r\n/g, '<br>'),
   };
 
-  return new Promise((resolve, reject) => {
-    transporter.sendMail(message, (error, info) => {
-      error ? reject(error) : resolve(info);
-    });
-  });
+  sgMail.send(data);
+
+  console.log(body);
+  res.status(200).json({ status: 'ok' });
 };
