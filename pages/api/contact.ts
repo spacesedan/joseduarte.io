@@ -2,12 +2,12 @@ import nodemailer from 'nodemailer';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const transport = nodemailer.createTransport({
-  host: 'smtp.sendgrid.net',
-  port: 587,
-  secure: false,
+  host: 'smtp-relay.sendinblue.com',
+  port: 465,
+  secure: true,
   auth: {
-    user: 'apikey',
-    pass: `${process.env.SENDGRID_API_KEY}`,
+    user: `${process.env.SENDINBLUE_USER}`,
+    pass: `${process.env.SENDINBLUE_PASS}`,
   },
 });
 
