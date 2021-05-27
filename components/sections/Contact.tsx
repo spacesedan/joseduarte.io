@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ContactForm from '../contact/ContactForm';
+import ContactForm from '../ContactForm';
 
 export const Contact = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (

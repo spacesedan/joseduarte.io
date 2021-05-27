@@ -14,7 +14,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   const data = {
     to: 'iam@joseduarte.io',
     from: 'hello@joseduarte.io',
-    subject: 'New contact message',
+    subject: 'New contact form submission',
     text: msg,
     html: msg.replace(/\r\n/g, '<br>'),
   };
