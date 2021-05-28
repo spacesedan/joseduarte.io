@@ -1,9 +1,9 @@
 .sticky-nav {
   position: fixed;
   display: flex;
-  transform: translateY(-50%);
+  transform: translate(-65%, -50%);
   z-index: 50;
-
+  right: 0;
   top: 50%;
 
   font-family: 'Monserrat';
@@ -16,7 +16,6 @@
 
 @media screen and (max-width: 640px) {
   .sticky-nav {
-    right: 0;
     transform: translate(-50%, -65%);
   }
 }
