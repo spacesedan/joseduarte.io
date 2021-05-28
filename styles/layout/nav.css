@@ -1,14 +1,10 @@
 .sticky-nav {
   position: fixed;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-right: 1rem;
-  padding-top: 2rem;
-  z-index: 1;
+  transform: translateY(-50%);
+  z-index: 50;
 
-  top: 0;
+  top: 50%;
 
   font-family: 'Monserrat';
 }
@@ -18,9 +14,9 @@
   @apply w-4 h-4 md:w-8 md:h-8 text-gray-800 dark:text-gray-200 mt-3 mb-3;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (max-width: 640px) {
   .sticky-nav {
-    padding-right: 2.5rem;
     right: 0;
+    transform: translate(-50%, -65%);
   }
 }

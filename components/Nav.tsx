@@ -9,13 +9,13 @@ export default function Nav({ children }) {
   useEffect(() => setMouted(true), []);
 
   return (
-    <section className='col-start-7 col-end-7 row-span-full'>
-      <nav className='sticky-nav'>
-        <div className='ml-8 mt-36 md:mt-0 grid grid-rows-5 gap-2 justify-center items-center'>
+    <section className='col-start-7 col-end-7 row-span-full flex justify-center '>
+      <nav className=' sticky-nav'>
+        <div className='flex flex-col items-center'>
           <button
             aria-label='Toggle Dark Mode'
             type='button'
-            className='bg-gray-300 dark:bg-gray-900 rounded p-3 h-10 w-10 focus:outline-none '
+            className='bg-gray-300 dark:bg-gray-900 rounded md:p-3 p-1 md:h-10 h-8 md:w-10 w-8 focus:outline-none flex justify-center items-center '
             onClick={() =>
               setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
             }
@@ -26,7 +26,7 @@ export default function Nav({ children }) {
                 viewBox='0 0 600 600'
                 fill='currentColor'
                 stroke='currentColor'
-                className='h-4 w-4 text-gray-800 dark:text-gray-200'
+                className='h-4 w-4  text-gray-800 dark:text-gray-200'
               >
                 {resolvedTheme === 'dark' ? (
                   <path

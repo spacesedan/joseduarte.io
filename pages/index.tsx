@@ -54,7 +54,7 @@ export const Index = ({ projects }) => {
   };
 
   return (
-    <div className='bg-gray-200 dark:bg-black min-h-screen grid grid-cols-7 grid-rows-1 px-6 md:px-24'>
+    <div className='bg-gray-200 dark:bg-black min-h-screen grid grid-cols-7 grid-rows-1 px-12 md:px-18'>
       <Meta />
       <Nav>
         <SideNav
