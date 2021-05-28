@@ -15,7 +15,7 @@ export default function SideNav({
   const isHeroVisible = useOnScreen(hero);
   const isProjectsVisible = useOnScreen(projects);
   const isAboutVisible = useOnScreen(about);
-  const isWorksVisible = useOnScreen(works);
+  // const isWorksVisible = useOnScreen(works);
   const isContactVisible = useOnScreen(contact);
 
   return (
@@ -64,7 +64,7 @@ export default function SideNav({
           <circle id='Inner' data-name='Inner' cx='308' cy='309.5' r='113' />
         )}
       </svg>
-      <svg
+      {/* <svg
         id='Works'
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 600 600'
@@ -78,7 +78,7 @@ export default function SideNav({
         {isWorksVisible && (
           <circle id='Inner' data-name='Inner' cx='308' cy='309.5' r='113' />
         )}
-      </svg>
+      </svg> */}
       <svg
         id='Contact'
         xmlns='http://www.w3.org/2000/svg'

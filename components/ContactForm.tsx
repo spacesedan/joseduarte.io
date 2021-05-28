@@ -92,7 +92,9 @@ export default function ContactForm() {
             <div className='contact__form--btn-block'>
               <button
                 className={`contact__form--btn ${
-                  formButtonDisabled ? 'bg-green-200' : 'bg-indigo-300'
+                  formButtonDisabled
+                    ? 'bg-green-200'
+                    : 'text-white bg-black dark:text-black dark:bg-white '
                 } `}
                 type='submit'
                 disabled={formButtonDisabled}

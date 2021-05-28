@@ -79,7 +79,7 @@ export const Index = ({ projects }) => {
           setImage={setImage}
         />
         <About ref={aboRef} />
-        <Works ref={worRef} />
+        {/* <Works ref={worRef} /> */}
         <Contact ref={conRef} />
         {selectedImage && (
           <Modal

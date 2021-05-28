@@ -1,5 +1,5 @@
 .paragraph {
-  width: clamp(45ch, 100%, 75ch);
+  width: clamp(55ch, 100%, 95ch);
   @apply text-xl;
 }
 

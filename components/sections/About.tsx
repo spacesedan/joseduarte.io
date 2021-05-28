@@ -1,3 +1,6 @@
+import BackendIcons from 'components/BackendSkills';
+import DesignIcons from 'components/DesignSkills';
+import FrontendIcons from 'components/FrontendSkills';
 import React from 'react';
 
 export const About = React.forwardRef<HTMLDivElement>((props, ref) => {
@@ -8,7 +11,7 @@ export const About = React.forwardRef<HTMLDivElement>((props, ref) => {
       ref={ref}
     >
       <h3 className='font-bold font-sans text-4xl'>About</h3>
-      <div className='w-full flex justify-center mt-10 pr-16 md:pr-0'>
+      <div className='w-full flex justify-start px-8 mt-10 pr-16 md:pr-0'>
         <p className='paragraph'>
           Hello, my name is Jose Duarte and I am a front end web developer from
           Los Angeles, California. I began my programming journey while I was
@@ -39,11 +42,23 @@ export const About = React.forwardRef<HTMLDivElement>((props, ref) => {
         </p>
       </div>
       <div className='mt-8'>
-        <p className='text-3xl font-semibold uppercase'>Skills</p>
-
-        <p className='text-2xl font-semibold'>Front End:</p>
-        <p className='text-2xl font-semibold'>Back End:</p>
-        <p className='text-2xl font-semibold'>Design Software:</p>
+        <p className='text-2xl md:text-3xl font-semibold uppercase'>Skills</p>
+        <div className='mt-5 flex flex-col '>
+          <div>
+            <p className='text-xl md:text-2xl font-semibold'>Front End:</p>
+            <FrontendIcons />
+          </div>
+          <div className='mt-5'>
+            <p className='text-xl md:text-2xl font-semibold'>Back End:</p>
+            <BackendIcons />
+          </div>
+          <div className='mt-5'>
+            <p className='text-xl md:text-2xl font-semibold'>
+              Design Software:
+            </p>
+            <DesignIcons />
+          </div>
+        </div>
       </div>
     </section>
   );

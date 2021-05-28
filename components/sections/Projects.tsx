@@ -31,11 +31,11 @@ const Projects = React.forwardRef<HTMLDivElement, IProjectProps>(
     return (
       <section
         id='projects'
-        className='row-start-2 row-end-2 col-span-full p-2  md:pt-12'
+        className='row-start-2 row-end-2 col-span-full '
         ref={ref}
       >
         <h3 className='font-bold font-sans text-4xl'>Projects</h3>
-        <div className=' px-4 md:px-12 py-16'>{proj}</div>
+        <div className='  py-16'>{proj}</div>
       </section>
     );
   }
