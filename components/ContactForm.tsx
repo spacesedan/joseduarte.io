@@ -33,8 +33,10 @@ export default function ContactForm() {
       .then(() => {
         console.log(formData);
         setState({
-          formButtonDisabled: true,
-          formButton: 'Message sent',
+          // formButtonDisabled: true,
+          formButtonDisabled: false,
+          // formButton: 'Message sent',
+          formButton: 'Send',
           name: '',
           email: '',
           text: '',
