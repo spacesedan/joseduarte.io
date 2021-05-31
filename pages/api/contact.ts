@@ -1,13 +1,17 @@
 import nodemailer from 'nodemailer';
 import { NextApiRequest, NextApiResponse } from 'next';
 
-const transport = nodemailer.createTransport({
-  service: 'SendGrid',
-  auth: {
-    user: 'apikey',
-    pass: `${process.env.SENDGRID}`,
-  },
-});
+import sgMail from '@sendgrid/mail';
+
+sgMail.setApiKey(process.env.SENDGRID);
+
+// const transport = nodemailer.createTransport({
+//   service: 'SendGrid',
+//   auth: {
+//     user: 'apikey',
+//     pass: `${process.env.SENDGRID}`,
+//   },
+// });
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
   const body = JSON.parse(req.body);
@@ -25,7 +29,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
     html: msg.replace(/\r\n/g, '<br>'),
   };
 
-  transport.sendMail(data);
+  sgMail.send(data);
 
   console.log(body);
   res.status(200).json({ status: 'ok' });
