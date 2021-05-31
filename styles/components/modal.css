@@ -88,8 +88,10 @@
 
   .modal__details {
     width: 100vw;
+    height: 67vh;
   }
   .modal__img {
     width: 100vw;
+    height: 33vh;
   }
 }
