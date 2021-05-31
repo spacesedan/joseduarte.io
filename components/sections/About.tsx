@@ -12,6 +12,26 @@ export const About = React.forwardRef<HTMLDivElement>((props, ref) => {
     >
       <h3 className='font-bold font-sans text-4xl'>About</h3>
       <div className='flex justify-center items-center'>
+        <div className=' w-full md:w-4/5'>
+          <div className='mt-5 flex flex-col '>
+            <div>
+              <p className='text-xl md:text-2xl font-semibold'>Front End:</p>
+              <FrontendIcons />
+            </div>
+            <div className='mt-5'>
+              <p className='text-xl md:text-2xl font-semibold'>Back End:</p>
+              <BackendIcons />
+            </div>
+            <div className='mt-5'>
+              <p className='text-xl md:text-2xl font-semibold'>
+                Design Software:
+              </p>
+              <DesignIcons />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='flex justify-center items-center'>
         <div className=' flex justify-start mt-10 text'>
           <p className='paragraph'>
             Hello, my name is Jose Duarte and I am a front end web developer
@@ -41,27 +61,6 @@ export const About = React.forwardRef<HTMLDivElement>((props, ref) => {
             courses I focused on building full stack Javascript applications
             while focusing most of my attention on the front end.
           </p>
-        </div>
-      </div>
-      <div className='flex justify-center items-center'>
-        <div className='mt-8 w-4/5'>
-          <p className='text-2xl md:text-3xl font-semibold uppercase'>Skills</p>
-          <div className='mt-5 flex flex-col '>
-            <div>
-              <p className='text-xl md:text-2xl font-semibold'>Front End:</p>
-              <FrontendIcons />
-            </div>
-            <div className='mt-5'>
-              <p className='text-xl md:text-2xl font-semibold'>Back End:</p>
-              <BackendIcons />
-            </div>
-            <div className='mt-5'>
-              <p className='text-xl md:text-2xl font-semibold'>
-                Design Software:
-              </p>
-              <DesignIcons />
-            </div>
-          </div>
         </div>
       </div>
     </section>
