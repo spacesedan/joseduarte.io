@@ -32,7 +32,8 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   sgMail
     .send(data)
     .then(() => {
-      res.status(200).send('Message Sent!');
+      res.status(200).send(JSON.stringify(msg));
+
       console.log(msg);
     })
     .catch((error) => {
