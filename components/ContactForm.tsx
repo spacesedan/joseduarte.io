@@ -35,8 +35,8 @@ export default function ContactForm() {
         setState({
           formButtonDisabled: true,
           // formButtonDisabled: false,
-          // formButton: 'Message sent',
-          formButton: 'Send',
+          formButton: 'Message sent',
+          // formButton: 'Send',
           name: '',
           email: '',
           text: '',
