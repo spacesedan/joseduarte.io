@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import sendContactMail from 'lib/contact';
 
 export default function ContactForm() {
   const [state, setState] = useState({
@@ -23,28 +24,21 @@ export default function ContactForm() {
       [e.target.value]: e.target.name,
     });
 
-    fetch('/api/contact', {
-      method: 'POST',
-      body: JSON.stringify(formData),
-      headers: {
-        'Content-Type': 'application/plain',
-      },
-    })
-      .then(() => {
-        console.log(formData);
-        setState({
-          formButtonDisabled: true,
-          // formButtonDisabled: false,
-          formButton: 'Message sent',
-          // formButton: 'Send',
-          name: '',
-          email: '',
-          text: '',
-        });
-      })
-      .catch((err) => {
-        console.log(err);
+    try {
+      sendContactMail(formData);
+      console.log(formData);
+      setState({
+        formButtonDisabled: true,
+        // formButtonDisabled: false,
+        formButton: 'Message sent',
+        // formButton: 'Send',
+        name: '',
+        email: '',
+        text: '',
       });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
