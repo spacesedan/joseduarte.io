@@ -29,18 +29,14 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
     html: msg.replace(/\r\n/g, '<br>'),
   };
 
-  return new Promise((resolve, reject) => {
-    sgMail
-      .send(data)
-      .then(() => {
-        res.status(200).send('Message Sent!');
-        console.log(msg);
-        resolve(data);
-      })
-      .catch((error) => {
-        res.json(error);
-        console.error(error);
-        reject(error);
-      });
-  });
+  sgMail
+    .send(data)
+    .then(() => {
+      res.status(200).send('Message Sent!');
+      console.log(msg);
+    })
+    .catch((error) => {
+      res.json(error);
+      console.error(error);
+    });
 };
