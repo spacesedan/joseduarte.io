@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer';
+// import nodemailer from 'nodemailer';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 import sgMail from '@sendgrid/mail';
@@ -29,8 +29,12 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
     html: msg.replace(/\r\n/g, '<br>'),
   };
 
-  sgMail.send(data);
-
-  console.log(body);
-  res.status(200).json({ status: 'ok' });
+  sgMail
+    .send(data)
+    .then(() => {
+      console.log(msg);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 };
