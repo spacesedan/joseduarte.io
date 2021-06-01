@@ -1,17 +1,8 @@
-// import nodemailer from 'nodemailer';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 import sgMail from '@sendgrid/mail';
 
 sgMail.setApiKey(process.env.SENDGRID);
-
-// const transport = nodemailer.createTransport({
-//   service: 'SendGrid',
-//   auth: {
-//     user: 'apikey',
-//     pass: `${process.env.SENDGRID}`,
-//   },
-// });
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
   const body = JSON.parse(req.body);

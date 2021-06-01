@@ -1,25 +1,9 @@
-# Oh-say.media (My Portfolio)
+# joseduarte.io
 
-## Technologies I want to use for my portfolio
+This is my second version of my Web Development portfolio. I have a major inspiration for the design of my portfolio, [Transmit 5](https://panic.com/transmit/). I really liked their spinning truck and I decided to create a model of my laptop and use it in a similar manner.
 
-- Three.js
+I used Next.js to build this website, over React because I didn't want to have to create a seperate backend in order to use SendGrid.
 
-  - @react-three/fiber
-  - @react-three/drei
-  - @react-three/cannon
+I styled the website using a combination of TailwindCSS and CSS
 
-  ```zsh
-  yarn add three @react-three/fiber @react-three/drei @react-three/cannon
-  ```
-
-## What do i want to build with it
-
-- Macbook 3d model that will work as my hero image similar to [Panic](https://panic.com/transmit/ 'https://panic.com/transmit/')
-
-## Problems using this technology
-
-- No prior experience using Three.js
-  - the only experiece i have is the videos i saw on udemy
-  - I plan to overcome this by following youtube tutorials on Blender so that I can get working knowledge of creating custom GTLF models and animations
-- Learning how to use Three js in a React project
-- I do have [resources] (https://sbcode.net/threejs/ "Sean Bradley Three.js tutorial") on the vairous modules included with three.js, it will just take practice to be able to build my models
+The major challenges working on this project were figuring out Three.js and creating the site navigation. This is the first project where I use Three.js, luckily they have some easy to understand documentation. The biggest struggle was during implementation was setting up the scene camera. I overcame this challenge by using Blender. I set my camera within the software, when I exported it and used it in my application I set the Three.js camera to the same one saved in the Blender file. The second challenge was creating a navigation that would help visitors navigate a single page application. I was able to acheive the functionality I was lloking for in my nagivation by using React references and JavaScripts intersection observer.

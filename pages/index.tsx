@@ -12,6 +12,7 @@ import SideNav from 'components/SideNav';
 import { getAllFilesFrontMatter } from 'lib/mdx';
 import Modal from 'components/Modal';
 import { Details, Image } from 'types/project';
+import Footer from 'styles/components/Footer';
 
 export const Index = ({ projects }) => {
   const homRef = useRef(null);
@@ -90,6 +91,7 @@ export const Index = ({ projects }) => {
           />
         )}
       </main>
+      <Footer />
     </div>
   );
 };
