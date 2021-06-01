@@ -1,17 +1,21 @@
 .footer {
   grid-column-start: 1;
-  grid-column-end: 7;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 2;
   height: 14rem;
   display: flex;
+  margin: auto;
   justify-content: center;
   align-items: center;
 }
 
 .footer--grid {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(3, minmax(min-content, 1fr));
   grid-template-rows: repeat(2, minmax(min-content, 1fr));
-  @apply text-lg md:text-xl text-gray-900 dark:text-gray-600;
+  @apply text-base md:text-xl text-gray-900 dark:text-gray-600;
 }
 
 .footer--grid__row-1-col-1 {
@@ -39,4 +43,11 @@
   justify-content: center;
   grid-row-start: 1;
   grid-row-end: 1;
+}
+
+.footer--grid__row-2 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-start: 2;
 }

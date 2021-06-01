@@ -3,7 +3,7 @@ import { PORTFOLIO_REPO, LINKEDIN } from 'lib/constants';
 export default function Footer() {
   return (
     <footer className='footer'>
-      <div className='w-full'>
+      <div className='w-full flex mx-auto'>
         <div className='footer--grid'>
           <div className='footer--grid__row-1-col-1 '>
             <a
@@ -26,9 +26,7 @@ export default function Footer() {
             </a>
           </div>
           <div className='footer--grid__row-1-col-3'></div>
-          <p className='row-start-2 row-span-1 col-span-full mt-16 '>
-            &#169; Jose Duarte 2021
-          </p>
+          <p className='footer--grid__row-2 mt-16 '>&#169; Jose Duarte 2021</p>
         </div>
       </div>
     </footer>
