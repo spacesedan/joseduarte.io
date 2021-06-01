@@ -25,7 +25,7 @@ export default function Footer() {
           </a>
         </div>
         <div className='footer--grid__row-1-col-3'></div>
-        <p className='footer--grid__row-2 mt-16 '>&#169; Jose Duarte 2021</p>
+        <p className='footer--grid__row-2'>&#169; Jose Duarte 2021</p>
       </div>
     </footer>
   );
