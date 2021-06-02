@@ -32,7 +32,7 @@ export const About = React.forwardRef<HTMLDivElement>((props, ref) => {
         </div>
       </div>
       <div className='flex justify-center items-center'>
-        <div className=' flex justify-start mt-10 text'>
+        <div className=' flex justify-center mt-10 '>
           <p className='paragraph'>
             Hello, my name is Jose Duarte and I am a front end web developer
             from Los Angeles, California. I began my programming journey while I
