@@ -109,7 +109,7 @@ export default function Macbook() {
 
     window.addEventListener('resize', onWindowResize, false);
     function onWindowResize() {
-      camera.aspect = 16 / 9;
+      camera.aspect = canvas.clientWidth / canvas.clientHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(canvas.clientWidth, canvas.clientHeight);
       render();
