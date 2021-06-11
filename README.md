@@ -1,6 +1,6 @@
 # joseduarte.io
 
-This is my second version of my Web Development portfolio. I have a major inspiration for the design of my portfolio, [Transmit 5](https://panic.com/transmit/). I really liked their spinning truck and I decided to create a model of my laptop and use it in a similar manner.
+This is the second version of my Web Development portfolio. The major inspiration for the design of my portfolio is [Transmit 5](https://panic.com/transmit/). I really liked their spinning truck and I decided to create a model of my laptop and use it in a similar manner.
 
 I used Next.js to build this website, over React because I didn't want to have to create a seperate backend in order to use SendGrid.
 
